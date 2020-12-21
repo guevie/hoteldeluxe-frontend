@@ -3,9 +3,10 @@ import React from "react";
 import Hero from "../component/Hero";
 import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
-
+import Services from '../component/Services'
 export default function Accueil() {
   return (
+    <>
     <Hero>
       <Banner
         title="Chambre de luxe"
@@ -16,5 +17,7 @@ export default function Accueil() {
         </Link>
       </Banner>
     </Hero>
+    <Services />
+    </>
   );
 }
