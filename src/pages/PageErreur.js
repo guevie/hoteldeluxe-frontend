@@ -1,10 +1,20 @@
 //rfc
 import React from 'react'
+import Hero from '../component/Hero'
+import Banner from '../component/Banner'
+import { Link } from 'react-router-dom'
+
 
 export default function PageErreur() {
-    return (
-        <div>
-            hello page erreur
-        </div>
-    )
+    return(
+        <Hero>
+            <Banner title='404' subtitle="page not found">
+                <Link to='/' className='btn-primary'>
+                    Retour Accueil
+                </Link>
+            </Banner>
+        </Hero>
+
+    ) 
+           
 }
