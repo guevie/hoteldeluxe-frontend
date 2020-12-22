@@ -1,9 +1,9 @@
 //rfc creer une fonction
-import React from "react";
 import Hero from "../component/Hero";
 import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import Services from '../component/Services'
+import FuturesChambres from "../component/FuturesChambres";
 export default function Accueil() {
   return (
     <>
@@ -18,6 +18,7 @@ export default function Accueil() {
       </Banner>
     </Hero>
     <Services />
+    <FuturesChambres />
     </>
   );
 }
