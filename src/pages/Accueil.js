@@ -4,7 +4,7 @@ import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import Services from '../component/Services'
 import FuturesChambres from "../component/FuturesChambres";
-export default function Accueil() {
+ function Accueil() {
   return (
     <>
     <Hero>
@@ -22,3 +22,5 @@ export default function Accueil() {
     </>
   );
 }
+
+export default Accueil 
