@@ -4,7 +4,8 @@ import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import Services from '../component/Services'
 import FuturesChambres from "../component/FuturesChambres";
- function Accueil() {
+import Button from '../component/StyledHero' 
+function Accueil() {
   return (
     <>
     <Hero>
@@ -19,6 +20,7 @@ import FuturesChambres from "../component/FuturesChambres";
     </Hero>
     <Services />
     <FuturesChambres />
+    <Button>Hello </Button> 
     </>
   );
 }
