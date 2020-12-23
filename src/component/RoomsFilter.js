@@ -94,7 +94,7 @@ function RoomsFilter({ rooms }) {
 
         {/* taille et prix  */}
         <div className="form-group">
-          <label htmlFor="size">Taille chambre</label>
+          <label htmlFor="size">room size</label>
           <div className="size-input">
             <input
               type="number"
