@@ -4,7 +4,7 @@ import Room from "./Room";
 import Loading from "./Loading";
 import Title from "./Title";
 
- class FuturesChambres extends Component {
+class FuturesChambres extends Component {
   static contextType = RoomContext;
   render() {
     let { loading, featuredRooms: rooms } = this.context;
@@ -13,13 +13,13 @@ import Title from "./Title";
     });
     return (
       <section className="featured-rooms">
-        <Title title="futures chambres" />
+        <Title title="Nos chambres" />
         <div className="featured-rooms-center">
-        {loading ? <Loading /> : rooms}        
-        </div>    
+          {loading ? <Loading /> : rooms}
+        </div>
       </section>
     );
   }
 }
 
-export default FuturesChambres
+export default FuturesChambres;

@@ -4,7 +4,6 @@ import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import Services from '../component/Services'
 import FuturesChambres from "../component/FuturesChambres";
-import Button from '../component/StyledHero' 
 function Accueil() {
   return (
     <>
@@ -18,9 +17,10 @@ function Accueil() {
         </Link>
       </Banner>
     </Hero>
-    <Services />
     <FuturesChambres />
-    <Button>Hello </Button> 
+    <Services />
+    
+    
     </>
   );
 }
