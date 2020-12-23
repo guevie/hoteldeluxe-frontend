@@ -1,10 +1,23 @@
+import Room from './Room'
 
-
- function RoomsList() {
+ function RoomsList({rooms}) {
+     if(rooms.length === 0){
+         return(
+             <div className="empty-search">
+                 <h3>Malheuresement aucune chambre corresponde à vos critères de recherche</h3>
+             </div>
+         )
+     }
     return (
-        <div>
-            coucou liste
-        </div>
+        <section className="roomslist">
+            <div className="roomslist-center">
+                {
+                    rooms.map(item => {
+                        return <Room key={item.id} room={item} />
+                    })
+                }
+            </div>
+        </section>
     )
 }
 
