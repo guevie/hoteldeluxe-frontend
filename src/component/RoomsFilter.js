@@ -3,7 +3,7 @@ import { RoomContext } from "../context";
 import Title from "../component/Title";
 
 const getUnique = (items,value) => {
-    return [...new Set(item.map(item => item[value]))]    
+    return [...new Set(items.map(item => item[value]))]    
 }
 function RoomsFilter({rooms}) {
   const context = useContext(RoomContext);
@@ -21,6 +21,12 @@ function RoomsFilter({rooms}) {
     pets,
   } = context;
   let types = getUnique(rooms,'type')
+  //ajouter toute les options 
+  types = ['all',...types]
+
+  types = types.map((item,index) => {
+      return <option value={item} key={index}>{item}</option>
+  })
   return (
     <section className="filter-container">
       <Title title="search rooms" />
@@ -35,7 +41,8 @@ function RoomsFilter({rooms}) {
             className="form-control"
             onChange={handleChange}
           >
-            {}
+            {types}
+            {/* <option value="single">Seule</option> */}
           </select>
         </div>
         {/* end select type */}
