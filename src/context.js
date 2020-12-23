@@ -71,13 +71,32 @@ class RoomProvider extends Component {
       rooms, type,capacity,price,minSize,maxSize,
       breakfast,pets
     } = this.state
-
+    //toute les chambres 
     let tempRooms = [...rooms]
-    if(type !== 'all'){
-        
+    //transforme les valeurs
+    capacity = parseInt(capacity)
+    price = parseInt(price)
+    //a refaire 
+    //filtrer le type de chambres  et la capacité en même temps 
+    if(capacity !==1 && type !== 'all'){
+      tempRooms = tempRooms.filter(room =>room.capacity >= capacity)
       tempRooms = tempRooms.filter(room => room.type === type)
     }
+    //filtrer par etapes 
+    // if(capacity !==1){
+    //   tempRooms = tempRooms.filter(room =>room.capacity >= capacity)
+      
+    // }
 
+    // if(type !== 'all'){
+        
+    //   tempRooms = tempRooms.filter(room => room.type === type)
+    // }
+
+    //filtre par le prix 
+
+    tempRooms = tempRooms.filter(room => room.price <= price)
+    
     this.setState({
       sortedRooms:tempRooms
     })
